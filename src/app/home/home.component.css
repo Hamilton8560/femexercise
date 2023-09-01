@@ -1,0 +1,15 @@
+.perspective {
+    perspective: 1000px;
+}
+
+.tilt {
+    transform: rotateY(45deg); /* Adjust the angle as needed */
+    transition: transform 0.3s ease; /* This will smooth out the effect */
+}
+
+
+
+#myCanvas {
+    width: 100%; /* Maintain full width */
+    height: 70vh; /* Adjust the value as needed */
+  }

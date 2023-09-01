@@ -1,0 +1,50 @@
+<div class="flex flex-col justify-center items-center mt-4 md:mt-24">
+
+    <div class="w-full max-w-md mt-8">
+      <h2 class="text-center text-lg font-semibold mb-4">Contact Me</h2>
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <div class="mb-4">
+          <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
+          <input type="text" formControlName="name" placeholder="Jane Doe" id="name" class="form-input p-4 border w-64 md:w-96">
+          <div *ngIf="contactForm.get('name').invalid && contactForm.get('name').touched" class="text-red-600">
+            Name is required and must have at least 2 characters.
+          </div>
+        </div>
+        <div class="mb-4">
+          <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+          <input type="email" formControlName="email" placeholder="email@gmail.com" id="email" class="form-input p-4 border w-64 md:w-96">
+          <div *ngIf="contactForm.get('email').invalid && contactForm.get('email').touched" class="text-red-600">
+            Valid email is required.
+          </div>
+        </div>
+        <div class="mb-6">
+          <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message</label>
+          <textarea formControlName="message" id="message" placeholder="goals and questions..." class="p-2 form-textarea resize-none border w-64 md:w-96 h-32 md:h-32" rows="4"></textarea>
+          <div *ngIf="contactForm.get('message').invalid && contactForm.get('message').touched" class="text-red-600">
+            Message is required and must have at least 5 characters.
+          </div>
+        </div>
+  
+        <button type="submit" [disabled]="!contactForm.valid" class="bg-black hover:bg-gray-600 text-white py-2 px-4 rounded-full focus:outline-none focus:shadow-outline">
+            Submit
+          </button>
+      </form>
+    </div>
+  
+    <h1 class="font-serif font-bold md:text-xl justify-start">David Hamilton</h1>
+    <h1 class="text-xs md:text-sm italic font-serif">Certified Personal Trainer & Nutritionist</h1>
+  
+    <div class="flex flex-row bg-transparent -mt-4 ">
+        <img class="w-24 md:w-40 h-auto object-contain" src="../../assets/e7f3372b-ffb6-48b5-a64b-0fe58cc45fb9.png" alt="">
+        <img class="w-24 md:w-40 h-auto object-contain" src="../../assets/539e692d-a33b-4483-90e8-f81afb99a4bc.png" alt="">
+        <img class="w-16 md:w-32 h-auto object-contain" src="../../assets/precision+nutrition+certified+logo.png" alt="">
+    </div>
+  </div>
+
+    
+ 
+    
+
+<footer class="bg-black text-white p-4 mt-8 ">
+    <p class="text-center">&copy; 2023 From Earth to Mind. All rights reserved.</p>
+</footer>

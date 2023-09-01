@@ -1,18 +1,17 @@
 // scroll.service.ts
-import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Injectable, ElementRef } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ScrollService {
-  private scrollSubject = new Subject<void>();
+  private footerElement: ElementRef | null = null;
 
-  scrollToFooter() {
-    this.scrollSubject.next();
+  registerFooter(footer: ElementRef) {
+    this.footerElement = footer;
   }
 
-  getScrollObservable() {
-    return this.scrollSubject.asObservable();
+  scrollToFooter() {
+    this.footerElement?.nativeElement.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
   }
 }

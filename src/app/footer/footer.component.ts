@@ -28,9 +28,7 @@ export class FooterComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.scrollSubscription = this.scrollService.getScrollObservable().subscribe(() => {
-      this.scrollToFooter();
-    });
+    this.scrollService.registerFooter(this.elementRef);
   }
 
   onSubmit() {

@@ -12,6 +12,6 @@ export class ScrollService {
   }
 
   scrollToFooter() {
-    this.footerElement?.nativeElement.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+    this.footerElement?.nativeElement.scrollIntoView({ behavior: "smooth", block: "end"});
   }
 }

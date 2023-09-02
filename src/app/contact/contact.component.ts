@@ -6,11 +6,11 @@ import { Subscription } from 'rxjs';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-footer',
-  templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css']
+  selector: 'app-contact',
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.css']
 })
-export class FooterComponent implements OnInit {
+export class ContactComponent {
   private scrollSubscription: Subscription;
   contactForm: FormGroup;
 
@@ -46,10 +46,5 @@ export class FooterComponent implements OnInit {
     } else {
       console.log("Form is invalid");
     }
-  }
-
-  scrollToFooter() {
-    const footerElement = this.elementRef.nativeElement as HTMLElement;
-    footerElement.scrollIntoView({ behavior: 'smooth', block: 'end' });
   }
 }

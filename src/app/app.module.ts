@@ -14,14 +14,21 @@ import {MatButtonModule} from '@angular/material/button';
 import { AboutMeComponent } from './about-me/about-me.component';
 import {MatCardModule} from '@angular/material/card';
 import { ButtonModule } from 'primeng/button';
+import { ContactComponent } from './contact/contact.component';
+
+
+
 const routes: Routes = [
-  {path: '', component:HomeComponent}
+  {path: '', component:HomeComponent},
+  {path: 'contact', component:ContactComponent}
 ]
 
 @NgModule({
+  
   declarations: [
-    AppComponent, HomeComponent, DashboardComponent, FooterComponent, AboutMeComponent
+    AppComponent, HomeComponent, DashboardComponent, FooterComponent, AboutMeComponent,ContactComponent
   ],
+
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),

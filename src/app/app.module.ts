@@ -15,18 +15,20 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import {MatCardModule} from '@angular/material/card';
 import { ButtonModule } from 'primeng/button';
 import { ContactComponent } from './contact/contact.component';
+import { VideoComponent } from './video/video.component';
 
 
 
 const routes: Routes = [
   {path: '', component:HomeComponent},
-  {path: 'contact', component:ContactComponent}
+  {path: 'contact', component:ContactComponent},
+  {path: 'About-Me', component:VideoComponent}
 ]
 
 @NgModule({
   
   declarations: [
-    AppComponent, HomeComponent, DashboardComponent, FooterComponent, AboutMeComponent,ContactComponent
+    AppComponent, HomeComponent, DashboardComponent, FooterComponent, AboutMeComponent,ContactComponent, VideoComponent
   ],
 
   imports: [

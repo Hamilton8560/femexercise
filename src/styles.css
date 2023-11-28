@@ -5,24 +5,8 @@
 @import 'primeng/resources/primeng.min.css';
 @import 'primeicons/primeicons.css';
 @import url('https://fonts.googleapis.com/css2?family=Bangers&family=Bigelow+Rules&family=Chivo+Mono:wght@300&family=Rubik+80s+Fade&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=YourFont:wght@400;700&display=swap');
+
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;}
 
-@font-face {
-    font-family: 'Brandon Grotesque';
-    src: url('/path-to-fonts/brandon-grotesque.woff2') format('woff2'),
-         url('/path-to-fonts/brandon-grotesque.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Rooney';
-    src: url('/path-to-fonts/rooney.woff2') format('woff2'),
-         url('/path-to-fonts/rooney.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-  }
-  

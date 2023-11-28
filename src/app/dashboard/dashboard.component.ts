@@ -15,7 +15,12 @@ export class DashboardComponent {
       this.scrollService.registerFooter(this.contactSection);
     }
   }
-
+  goHome(){
+    if (window.location.pathname !== '/')
+    {
+    window.location.href="/"
+    }
+  }
   scrollToBottom() {
     this.router.navigate(['contact'])
     //this.scrollService.scrollToFooter();

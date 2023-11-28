@@ -12,6 +12,7 @@ export class ThreeService {
   private stars: THREE.Points;
   private sphere: THREE.Mesh;
 
+
   init(canvas: HTMLCanvasElement) {
     this.scene = new THREE.Scene();
     this.camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -66,6 +67,8 @@ export class ThreeService {
 
     this.renderer.render(this.scene, this.camera);
   }
+  
+  
   adjustCanvasSize() {
     const canvas = this.renderer.domElement;
     canvas.style.height = (window.innerHeight / 2) + 'px';
